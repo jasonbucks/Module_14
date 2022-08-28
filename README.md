@@ -30,8 +30,13 @@ The baseline trading algorithm uses the SVC classifier model from SKLearn's supp
 
 ## Evaluate a New Machine Learning Classifier
 
+After trying several differnt new machine learning models (including AdaBoost, Decision Tree Classifier, or Logistic Regression), I finally found one that improved on the results from the baseline model.  The Gaussian Naive Bayes classifier garnered a cumulative strategy return of nearly 70% compared to the 50% cumulative return from the baseline model.  This 70% return, however, was still less than the 80% achieved by tuning the baseline trading algortithm.
 
+   ![New Model Plot](Images/baseline_gnb.png)
+   
+## Summary Evaluation Report
 
+In summary, I'd recommend using a 6-month training data set.  This longer training period seems to much better at predicting future downturns in the market, allowing the algorithm to trade out of the market in time to avoid huge losses. While this longer training period results in slightly lower returns during bull markets, it clearly kept our investments from tanking during the bear market during the start of COVID in 2020 (see the second graph above compared with the other two graphs).  As for which type of machine learning classifier to use, the SVM model seems adequate enough to produce results that beat the market returns.  It may be worth considering using the Gaussian Naive Bayes method combined with the 6 month training period dataset to see if that combination produces superior results.
 
 ## Contributors
 
